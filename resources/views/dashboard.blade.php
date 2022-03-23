@@ -43,6 +43,5 @@
             </div>
         @endif
     </div>
-    @yield('content')
 </body>
 </html>

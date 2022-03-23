@@ -66,11 +66,12 @@ class CustomAuthController extends Controller
     }
     public function dashboard()
     {
-        if(Auth::check()){
-            return view('dashboard');
-        }
+        // if(Auth::check()){
+        //     return view('dashboard');
+        // }
 
-        return redirect("login");
+        // return redirect("login");
+        return view("dashboard");
     }
     public function create(array $data)
     {
@@ -80,6 +81,7 @@ class CustomAuthController extends Controller
         'password' => Hash::make($data['password'])
       ]);
     }
+
     public function logout() {
         Session::flush();
         Auth::logout();
